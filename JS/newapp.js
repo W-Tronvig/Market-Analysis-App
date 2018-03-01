@@ -12,13 +12,28 @@ function randomProductUrl (){
     var random = Math.floor(Math.random() * productsArray.length);
     return productsArray[random].url;
 }
+
 var randomProductDisplay = function (){
+    var urlArray = [];
     var productBag = document.getElementById('bag');
     var img = document.createElement('img');
     img.setAttribute("src", randomProductUrl());
-    productBag.appendChild(img);   
+    productBag.appendChild(img);
+    
+    while (urlArray.length != 3) {
+        var currentUrl = randomProductUrl();
+        if (urlArray.indexOf(currentUrl) == -1){
+            urlArray.push(currentUrl);
+        }
+    };
+    console.log(urlArray);
 
+    for (let i = 0; i < urlArray.length; i++) {
+
+    }
 }
+
+
 var productsArray = [];
 productsArray.push(
     new Product('r2d2 bag', 'IMG/bag.jpg'),
