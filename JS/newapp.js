@@ -7,10 +7,18 @@ var Product = function (name, url) {
     this.clicks = 0;
 };
 
-var randomProductDisplay = function (){
+function randomProductUrl (){
     
+    var random = Math.floor(Math.random() * productsArray.length);
+    return productsArray[random].url;
 }
+var randomProductDisplay = function (){
+    var productBag = document.getElementById('bag');
+    var img = document.createElement('img');
+    img.setAttribute("src", randomProductUrl());
+    productBag.appendChild(img);   
 
+}
 var productsArray = [];
 productsArray.push(
     new Product('r2d2 bag', 'IMG/bag.jpg'),
@@ -31,12 +39,6 @@ productsArray.push(
 
 // window.addEventListener('load');
 
-var productBag = document.getElementById('bag');
-{/* <img src="IMG/bag.jpg"> */}
-var img = document.createElement('img');
-img.setAttribute("src", "IMG/bag.jpg")
-console.log(img);
-productBag.appendChild(img);
 
 
     
