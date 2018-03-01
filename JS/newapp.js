@@ -7,11 +7,9 @@ var Product = function (name, url) {
     this.clicks = 0;
 };
 
-
 var randomProductDisplay = function (){
     
 }
-
 
 var productsArray = [];
 productsArray.push(
@@ -30,3 +28,15 @@ productsArray.push(
     new Product('repouring can', 'IMG/water_can.jpg'),
     new Product('undrinkable wine glass', 'IMG/wine_glass.jpg')
 );
+
+// window.addEventListener('load');
+
+var productBag = document.getElementById('bag');
+{/* <img src="IMG/bag.jpg"> */}
+var img = document.createElement('img');
+img.setAttribute("src", "IMG/bag.jpg")
+console.log(img);
+productBag.appendChild(img);
+
+
+    
