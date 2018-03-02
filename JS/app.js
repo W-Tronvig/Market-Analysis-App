@@ -30,9 +30,6 @@ function randomProductUrl (){
 var randomProductDisplay = function (){
     var urlArray = [];
     var productBag = document.getElementById('bag');
-    var img = document.createElement('img');
-    img.setAttribute("src", randomProductUrl());
-    productBag.appendChild(img);
     
     while (urlArray.length != 3) {
         var currentUrl = randomProductUrl();
@@ -43,32 +40,33 @@ var randomProductDisplay = function (){
     console.log(urlArray);
 
     for (let i = 0; i < urlArray.length; i++) {
-        var groupOfThreeImages = document.createElement('img');
-            // left off here. 
+        var img = document.createElement('img');
+        img.setAttribute("src", urlArray[i]);
+        productBag.appendChild(img);  
     }
 }
 
 
 var productsArray = [];
 productsArray.push(
-    new Product('r2d2 bag', 'IMG/bag.jpg'),
-    new Product('banana slicer', 'IMG/banana.jpg'),
-    new Product('toeless boots', 'IMG/boots.jpg'),
-    new Product('odd chair', 'IMG/chair.jpg'),
-    new Product('creature', 'IMG/cthulhu.jpg'),
-    new Product('dragon spam', 'IMG/dragon.jpg'),
-    new Product('pentencil', 'IMG/pen.jpg'),
-    new Product('pizza scissors', 'IMG/scissors.jpg'),
-    new Product('shark sleeping bag', 'IMG/shark.jpg'),
-    new Product('baby broom', 'IMG/sweep.jpg'),
-    new Product('unicorn spam', 'IMG/unicorn.jpg'),
-    new Product('usb alien', 'IMG/usb.jpg'),
-    new Product('repouring can', 'IMG/water_can.jpg'),
-    new Product('undrinkable wine glass', 'IMG/wine_glass.jpg')
+    new Product('r2d2 bag', 'images/bag.jpg'),
+    new Product('banana slicer', 'images/banana.jpg'),
+    new Product('toeless boots', 'images/boots.jpg'),
+    new Product('odd chair', 'images/chair.jpg'),
+    new Product('creature', 'images/cthulhu.jpg'),
+    new Product('dragon spam', 'images/dragon.jpg'),
+    new Product('pentencil', 'images/pen.jpg'),
+    new Product('pizza scissors', 'images/scissors.jpg'),
+    new Product('shark sleeping bag', 'images/shark.jpg'),
+    new Product('baby broom', 'images/sweep.jpg'),
+    new Product('unicorn spam', 'images/unicorn.jpg'),
+    new Product('usb alien', 'images/usb.jpg'),
+    new Product('repouring can', 'images/water_can.jpg'),
+    new Product('undrinkable wine glass', 'images/wine_glass.jpg')
 );
 
-// window.addEventListener('load');
+// window.addEventListener('load', randomProductDisplay());
 
-
+randomProductDisplay();
 
     
