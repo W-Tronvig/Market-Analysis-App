@@ -1,5 +1,5 @@
 html { 
-  background: url(../images/skull2.jpg) no-repeat center center fixed; 
+  background: url(../images/mainbackground.jpg) no-repeat center center fixed; 
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -8,19 +8,36 @@ html {
 
 h1 {
   text-align: center;
-  color: white;
+  color: rgb(255, 140, 0);
 
 }
 h2 {
   text-align: center;
-  color: white;
+  color:rgb(255, 140, 0);
+  margin-bottom: 40px;
 }
 
 div {
+  display: flex;
+  justify-content: space-around;
+  
+}
+img {
+  border-radius: 20px;
+
+}
+/* div {
   border: 1px solid blue;
   width: 30%;
   display: inline-block;
   vertical-align: top;
   margin-right: 5%;
-}
+} */
+
+/* table {
+  border: solid 2px gray;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: rgba(0, 0, 0, 0.694);
+} */
 

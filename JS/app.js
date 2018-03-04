@@ -12,6 +12,20 @@
 
 
 // Product Constructor
+function addListeners () {
+    document.getElementById("bigbag").addEventListener("click", productClicks)
+}
+function productClicks(event) {
+    if(event.target.tagName == "IMG") {
+        var index = event.target.src.lastIndexOf("/");
+        var clickUrl = event.target.src.substring(index + 1);
+        console.log(clickUrl);
+    for (let i = 0; i < productsArray.length; i++)
+        if (productsArray[i].url.indexOf(clickUrl) != -1) {
+            console.log('match', productsArray[i]);
+        }
+    }
+}
 
 var Product = function (name, url) {
     this.name = name;
@@ -29,7 +43,7 @@ function randomProductUrl (){
 
 var randomProductDisplay = function (){
     var urlArray = [];
-    var productBag = document.getElementById('bag');
+    var productBag = document.getElementById('bigbag');
     
     while (urlArray.length != 3) {
         var currentUrl = randomProductUrl();
@@ -65,7 +79,7 @@ productsArray.push(
     new Product('undrinkable wine glass', 'images/wine_glass.jpg')
 );
 
-// window.addEventListener('load', randomProductDisplay());
+window.addEventListener('load', addListeners);
 
 randomProductDisplay();
 
