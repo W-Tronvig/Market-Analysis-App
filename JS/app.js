@@ -56,9 +56,11 @@ function productClicks(event) {
         counter++
         if (counter % 15 == 0) {
            document.getElementById("show-chart-button").style.visibility = "visible";
+           
         }
         else {
             document.getElementById("show-chart-button").style.visibility = "hidden";
+            document.getElementById("chartContainer").style.visibility = "hidden";
         }
     }
 }

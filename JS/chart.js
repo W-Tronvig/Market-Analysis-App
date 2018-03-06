@@ -18,5 +18,6 @@ function showChart() {
 		}
 		]
 	});
+	document.getElementById("chartContainer").style.visibility = "visible";
 	chart.render();
 }
