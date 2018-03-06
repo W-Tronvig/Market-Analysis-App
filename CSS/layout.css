@@ -8,13 +8,13 @@ html {
 
 h1 {
   text-align: center;
-  color: rgb(255, 140, 0);
+  color: rgb(250, 104, 71);
   font-size: 80px; 
 }
 
 h2 {
   text-align: center;
-  color:rgb(255, 140, 0);
+  color: rgb(250, 104, 71);
   margin-bottom: 40px;
 }
 
@@ -31,9 +31,10 @@ img {
 
 input {
   margin: 60px auto; 
-  display: block;  
+  display: block;
+  visibility: hidden;  
   color: white;
-  background-color: rgb(255, 140, 0);
+  background-color: rgb(250, 104, 71);
   width: 100px; 
   height: 50px; 
   border-radius: 10px; 

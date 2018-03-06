@@ -9,6 +9,7 @@ var Product = function (name, url) {
     this.label = name;
     this.url = url;
     this.y = 0;
+
 };
 
 // Methods within the constructor
@@ -39,18 +40,27 @@ var randomProductDisplay = function (){
 }
 
 
+var counter = 0;
 function productClicks(event) {
     if(event.target.tagName == "IMG") {
         var index = event.target.src.lastIndexOf("/");
         var clickUrl = event.target.src.substring(index + 1);
         console.log(clickUrl);
-    for (let i = 0; i < productsArray.length; i++)
-        if (productsArray[i].url.indexOf(clickUrl) != -1) {
-            productsArray[i].y += 1;
-            console.log('match', productsArray[i]);
+        for (let i = 0; i < productsArray.length; i++) {
+            if (productsArray[i].url.indexOf(clickUrl) != -1) {
+                productsArray[i].y += 1;
+                console.log('match', productsArray[i]);
+            }
+        }
+        randomProductDisplay();
+        counter++
+        if (counter % 15 == 0) {
+           document.getElementById("show-chart-button").style.visibility = "visible";
+        }
+        else {
+            document.getElementById("show-chart-button").style.visibility = "hidden";
         }
     }
-    randomProductDisplay();
 }
 
 var productsArray = [];
