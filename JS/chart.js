@@ -8,7 +8,7 @@ window.addEventListener("load", function() {
 function showChart() {
 	var chart = new CanvasJS.Chart("chartContainer", {
 		title:{
-			text: "BusMall Image Results"
+			text: "Data Analysis Chart"
 		},
 		data: [
 		{

@@ -1,16 +1,5 @@
 'use strict';
 
-// Project Goals:
-
-// - Upon page load, have three images appear on the screen in accordance with HTML and CSS applied.
-// - Display text above the images to let the user know to click on the image.
-// - Once image becomes clicked, then three new images appear and browser keeps track of clicks without reloading page completely.
-// - Store images in an array or maybe an array within an array? Have a loop so that the randomizer can randomly select images from the loop and display three at a time.
-// - Have function that displays images.
-// - Have function that displays totals, in a table of some type.
-// - Try for function that displays totals in different types of ways, percentages, data points on table.
-
-
 // Product Constructor
 function addListeners () {
     document.getElementById("bigbag").addEventListener("click", productClicks)
@@ -63,8 +52,6 @@ function productClicks(event) {
     }
     randomProductDisplay();
 }
-
-
 
 var productsArray = [];
 productsArray.push(
