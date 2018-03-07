@@ -23,26 +23,3 @@ div {
   justify-content: space-around;
   flex-flow: row wrap;
 }
-
-img {
-  border-radius: 20px;
-  border: 10px solid black; 
-}
-
-input {
-  margin: 60px auto; 
-  display: block;
-  visibility: hidden;  
-  color: white;
-  background-color: rgb(9, 255, 0);
-  width: 450px; 
-  height: 200px; 
-  border-radius: 10px; 
-  border: 4px solid black;
-  font-size: 70px;
-}
-
-em {
-  font-size: 50px;
-  color: rgb(9, 255, 0);
-} 
