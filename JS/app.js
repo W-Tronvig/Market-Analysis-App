@@ -37,6 +37,7 @@ var randomProductDisplay = function (){
         img.setAttribute("src", urlArray[i]);
         productBag.appendChild(img);
     }
+        localStorage.setItem("productsArray", JSON.stringify(productsArray));
 }
 
 
@@ -66,6 +67,7 @@ function productClicks(event) {
 }
 
 var productsArray = [];
+if (localStorage.getItem("productsArray") == null) {
 productsArray.push(
     new Product('r2d2 bag', 'images/bag.jpg'),
     new Product('banana slicer', 'images/banana.jpg'),
@@ -82,6 +84,9 @@ productsArray.push(
     new Product('repouring can', 'images/water_can.jpg'),
     new Product('undrinkable wine glass', 'images/wine_glass.jpg')
 );
+} else {
+    var productsArray = JSON.parse(localStorage.getItem("productsArray"));
+}
 
 window.addEventListener('load', addListeners);
 window.addEventListener('load', randomProductDisplay);
