@@ -9,9 +9,6 @@
     <h1>For the layout portions of the css, please use the following styles:</h1> <br>
         html { <br>
             background: url(../images/mainbackground.jpg) no-repeat center center fixed; <br>
-            -webkit-background-size: cover;<br>
-            -moz-background-size: cover;<br>
-            -o-background-size: cover;<br>
             background-size: cover;<br>
         }<br>
       
@@ -37,6 +34,8 @@
         img {<br>
             border-radius: 20px;<br>
             border: 10px solid black; <br>
+            animation-duration: 2.5s;<br>
+            animation-name: bounceIn; <br>
         }<br>
       
         input {<br>
@@ -45,16 +44,33 @@
         visibility: hidden;  <br>
         color: white;<br>
         background-color: rgb(9, 255, 0);<br>
-        width: 450px; <br>
-        height: 200px; <br>
+        width: 700px; <br>
+        height: 300px; <br>
         border-radius: 10px; <br>
-        border: 4px solid black;<br>
+        border: 14px solid black;<br>
         font-size: 70px;<br>
         }<br>
       
         em {<br>
         font-size: 50px;<br>
         color: rgb(9, 255, 0);<br>
+        }<br>
+
+         @keyframes bounceIn {<br>
+        0% {<br>
+        transform: scale(0.1);<br>
+        opacity: 0;<br>
+        }<br>
+        60% {<br>
+        transform: scale(1.2);<br>
+        opacity: 1;<br>
+        }<br>
+        100% {<br>
+        transform: scale(1);<br>
+        }<br>
+        }<br>
+        input:hover{ <br>
+        background-color: red; <br>
         }<br>
 </body>
 </html>	
